@@ -10,7 +10,7 @@ const quizSlice = createSlice({
     timeTaken: 0,
   },
   reducers: {
-    incrementQuesIdx: (state, action) => {
+    incrementQuesIdx: (state) => {
       state.currQuesIdx += 1;
     },
 
@@ -21,9 +21,13 @@ const quizSlice = createSlice({
     updateTimer: (state, action) => {
       state.timeTaken = 60 - action.payload;
     },
+
+    resetQuesIdx: (state) => {
+      state.currQuesIdx = 0;
+    },
   },
 });
 
-export const { incrementQuesIdx, saveAnswer, updateTimer } = quizSlice.actions;
+export const { incrementQuesIdx, saveAnswer, updateTimer, resetQuesIdx } = quizSlice.actions;
 
 export default quizSlice.reducer;

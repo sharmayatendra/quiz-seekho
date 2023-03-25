@@ -1,11 +1,13 @@
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import { resetQuesIdx } from "../features/quizSlice";
 import { calculateScore } from "../utils/helper";
 
 const Result = () => {
   const { mcqs } = useSelector((store) => store.quiz.quiz);
   const answers = useSelector((store) => store.quiz.answers);
   const timeTaken = useSelector((store) => store.quiz.timeTaken);
+  const dispatch = useDispatch();
   let timeString =
     timeTaken === 60
       ? "1:00"
@@ -49,7 +51,10 @@ const Result = () => {
           </div>
         </div>
         <div className="text-center bg-white py-8 sm:mx-4 sm:rounded-t-md">
-          <button className="px-4 py-2 w-28 bg-purple-800 text-white rounded-full">
+          <button
+            className="px-4 py-2 w-28 bg-purple-800 text-white rounded-full"
+            onClick={() => dispatch(resetQuesIdx())}
+          >
             <Link to="/">Homepage</Link>
           </button>
         </div>
