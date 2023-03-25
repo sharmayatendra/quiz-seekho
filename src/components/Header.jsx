@@ -3,7 +3,7 @@ import React from "react";
 const Header = () => {
   return (
     <header className="w-full shadow-md p-4 ">
-      <a href="/" className="flex text-purple-600 font-medium gap-1">
+      <a href="/" className="inline-flex text-purple-600 font-medium gap-1">
         <img
           src="https://dntsgn6vvw8wj.cloudfront.net/resources/1663836897587-seekho%20logo%20for%20white%20bg.png"
           alt="logo"

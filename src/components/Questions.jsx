@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import SingleQuestion from "./SingleQuestion";
-import { data } from "../data";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { updateTimer } from "../features/quizSlice";
@@ -26,8 +25,8 @@ const Questions = () => {
   if (timer === 0) navigate("/result");
 
   return (
-    <div className="flex flex-col p-6 border border-red-400">
-      <div className="flex justify-between border border-green-400">
+    <div className="flex flex-col p-6 min-h-screen sm:mx-24 md:mx-40">
+      <div className="flex justify-between">
         <div className="bg-green-400 px-4 py-2 rounded-full text-white w-16 text-center">
           {currQuesIdx + 1}/5
         </div>

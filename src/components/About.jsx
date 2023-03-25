@@ -9,7 +9,7 @@ const About = () => {
         <h1 className="text-3xl text-slate-600 font-bold">About this Quiz</h1>
         <p>{QUIZ_INFO}</p>
       </article>
-      <button className="bg-gradient-to-r from-purple-500 to-purple-800 w-32 shadow-md border text-white px-2 py-1 rounded-md">
+      <button className="bg-gradient-to-r from-purple-500 to-purple-800 w-32 mb:8 shadow-md border text-white px-2 py-1 rounded-md">
         <Link to="/question">Take Quiz</Link>
       </button>
     </div>

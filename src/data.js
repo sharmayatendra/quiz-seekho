@@ -94,7 +94,7 @@ export const data = {
         },
         {
           id: "43",
-          option: "volatage and resistance",
+          option: "voltage and resistance",
           isCorrect: true,
         },
         {
@@ -120,7 +120,7 @@ export const data = {
         },
         {
           id: "53",
-          option: "volatage",
+          option: "voltage",
           isCorrect: false,
         },
         {

@@ -14,6 +14,7 @@ const SingleQuestion = () => {
   const handleNext = () => {
     dispatch(saveAnswer({ id: mcqs[currQuesIdx].id, value: resp }));
     if (currQuesIdx !== mcqs.length - 1) dispatch(incrementQuesIdx());
+    setResp("");
   };
 
   const handler = (value) => {
@@ -31,15 +32,17 @@ const SingleQuestion = () => {
       <div className="flex justify-center mt-8">
         {currQuesIdx === mcqs.length - 1 ? (
           <button
-            className="px-4 py-2 w-28 bg-purple-800 text-white rounded-full"
+            className="px-4 py-2 w-28 bg-purple-800 text-white rounded-full disabled:opacity-50"
             onClick={handleNext}
+            disabled={resp === ""}
           >
             <Link to="/result">Submit</Link>
           </button>
         ) : (
           <button
-            className="px-4 py-2 w-28 bg-purple-800 text-white rounded-full"
+            className="px-4 py-2 w-28 bg-purple-800 text-white rounded-full disabled:opacity-50"
             onClick={handleNext}
+            disabled={resp === ""}
           >
             Next
           </button>

@@ -50,7 +50,7 @@ const Result = () => {
         </div>
         <div className="text-center bg-white py-8 sm:mx-4 sm:rounded-t-md">
           <button className="px-4 py-2 w-28 bg-purple-800 text-white rounded-full">
-            <Link to="/answers">Answers</Link>
+            <Link to="/">Homepage</Link>
           </button>
         </div>
       </div>
